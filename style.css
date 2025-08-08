@@ -1,0 +1,138 @@
+/* Reset some basic defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  background: #fafafa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  #sceneContainer {
+    height: 300px;
+  }
+}
+
+#controls {
+  width: 320px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: calc(100vh - 4rem);
+}
+
+#sceneContainer {
+  flex: 1;
+  position: relative;
+  min-height: 500px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group,
+fieldset {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-right: 0.25rem;
+  font-size: 0.9rem;
+}
+
+textarea,
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.25rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.check-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+legend {
+  font-size: 0.9rem;
+  padding: 0 0.3rem;
+  color: #555;
+}
+
+button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+.status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #007acc;
+  min-height: 1.5rem;
+}

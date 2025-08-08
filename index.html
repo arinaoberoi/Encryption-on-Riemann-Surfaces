@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riemann Surface Encryption Visualiser</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Riemann Surface Encryption Visualiser</h1>
+      <p>
+        Map your text onto a Riemann surface using modular arithmetic and
+        complex analysis. Adjust the keys below to explore different
+        encryptions.
+      </p>
+    </header>
+
+    <main>
+      <section id="controls">
+        <div class="input-group">
+          <label for="inputText">Text to encrypt:</label>
+          <textarea id="inputText" rows="3" placeholder="Type your message here...">Hello, Riemann!</textarea>
+        </div>
+        <fieldset>
+          <legend>Torus (modular) keys</legend>
+          <div class="row">
+            <label for="key1">Key 1:</label>
+            <input type="number" id="key1" value="7" min="1" />
+            <label for="mod1">Mod 1:</label>
+            <input type="number" id="mod1" value="53" min="2" />
+          </div>
+          <div class="row">
+            <label for="key2">Key 2:</label>
+            <input type="number" id="key2" value="11" min="1" />
+            <label for="mod2">Mod 2:</label>
+            <input type="number" id="mod2" value="97" min="2" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Polynomial (complex) keys</legend>
+          <div class="row">
+            <label for="key3">Key:</label>
+            <input type="number" id="key3" value="5" min="1" />
+            <label for="mod3">Mod:</label>
+            <input type="number" id="mod3" value="29" min="2" />
+          </div>
+        </fieldset>
+        <div class="row check-row">
+          <label>
+            <input type="checkbox" id="showTorus" checked /> Show torus mapping
+          </label>
+          <label>
+            <input type="checkbox" id="showComplex" checked /> Show polynomial mapping
+          </label>
+        </div>
+        <button id="encryptButton">Encrypt &amp; Visualise</button>
+        <p id="status" class="status"></p>
+      </section>
+      <section id="sceneContainer"></section>
+    </main>
+
+    <!-- Three.js and application logic -->
+    <!-- Load Three.js library and OrbitControls.  These scripts expose
+         global variables (THREE and THREE.OrbitControls) so that
+         app.js can reference them without using ECMAScript modules.  -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.min.js"></script>
+    <!-- The application logic.  This script uses a simple manual orbit control
+         implementation rather than depending on external modules. -->
+    <script src="app.js"></script>
+  </body>
+</html>
