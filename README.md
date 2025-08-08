@@ -18,10 +18,7 @@ browser.
 * **Interactive 3D** — the visualisation is built on top of
   [Three.js](https://threejs.org/) with orbit controls, so you can pan,
   zoom and rotate the view.
-* **No external build tools** — the entire app is written in plain HTML,
-  CSS and modern JavaScript modules.  To run it locally you only need a
-  static file server (or open `index.html` directly in a modern browser).
-
+  
 ## Encryption schemes
 
 Two different mappings are implemented in `app.js`:
@@ -60,30 +57,3 @@ Two different mappings are implemented in `app.js`:
    polynomial `w = √(z³ – 1)`.  Each character thus determines a point
    `(Re(z), Im(z), Re(w))` in 3‑space.  The square root introduces two
    branches of `w`; we always select the principal branch for simplicity.
-
-## Running locally
-
-No compilation is necessary.  If you have Python installed you can run
-
-```sh
-python3 -m http.server 8000
-```
-
-inside the project directory and then navigate to
-`http://localhost:8000` in your browser.  Alternatively, simply open
-`index.html` directly in a modern browser (tested in Chrome 112+, Safari
-16+ and Firefox 113+).
-
-## Repository contents
-
-```
-riemann-visualizer-app/
-├── index.html    # Main webpage
-├── style.css     # Basic styling
-├── app.js        # Encryption logic and 3D visualisation
-└── README.md     # This documentation
-```
-
-Feel free to clone this repository to your own GitHub account and extend
-the encryption algorithms, add new surface types or improve the
-visualisations.  Pull requests are welcome!
