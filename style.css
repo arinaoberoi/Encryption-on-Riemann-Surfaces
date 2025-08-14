@@ -1,4 +1,3 @@
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,8 +8,8 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5;
-  background-color: #1a1a2e; /* Dark navy background */
-  color: #f8f9fa; /* Light text */
+  background-color: #1a1a2e; 
+  color: #f8f9fa; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,7 @@ body {
 header {
   text-align: center;
   padding: 2rem 1rem 1rem;
-  background-color: #8e0e3c; /* Deep pink */
+  background-color: #8e0e3c; 
   color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -49,7 +48,7 @@ main {
 #controls {
   width: 320px;
   padding: 1rem;
-  background-color: #2b2d42; /* Dark blue-grey */
+  background-color: #2b2d42;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   overflow-y: auto;
@@ -60,7 +59,7 @@ main {
   flex: 1;
   position: relative;
   min-height: 500px;
-  background-color: #1a1a2e; /* Matches body background */
+  background-color: #1a1a2e;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
@@ -92,7 +91,7 @@ input[type="number"] {
 textarea:focus,
 input[type="number"]:focus {
   outline: none;
-  border-color: #e83e8c; /* Accent pink */
+  border-color: #e83e8c;
   box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.3);
 }
 
@@ -123,7 +122,7 @@ fieldset {
 legend {
   font-size: 0.9rem;
   padding: 0 0.3rem;
-  color: #e83e8c; /* Accent pink */
+  color: #e83e8c;
 }
 
 button {
@@ -131,7 +130,7 @@ button {
   padding: 0.6rem 1.2rem;
   font-size: 0.95rem;
   font-weight: 600;
-  background-color: #d63384; /* Pink button */
+  background-color: #d63384;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -141,12 +140,12 @@ button {
 }
 
 button:hover {
-  background-color: #c2185b; /* Darker hover pink */
+  background-color: #c2185b; 
 }
 
 .status {
   margin-top: 0.5rem;
   font-size: 0.85rem;
-  color: #e83e8c; /* Accent pink */
+  color: #e83e8c;
   min-height: 1.5rem;
 }
